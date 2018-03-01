@@ -188,12 +188,12 @@ public class IvyMenuContributionItem extends CompoundContributionItem implements
         fillMenu(menuManager, items, new CommandContributionItem(parm));
     }
 
-    private void fillMenu(MenuManager menuManager, List<MenuManager> items,
+    private void fillMenu(MenuManager menuManager, List<IContributionItem> items,
             IContributionItem commandContributionItem) {
         if (menuManager != null) {
             menuManager.add(commandContributionItem);
         } else {
-            items.add((MenuManager) commandContributionItem);
+            items.add(commandContributionItem);
         }
     }
 
