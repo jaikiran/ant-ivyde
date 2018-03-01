@@ -111,7 +111,7 @@ public class IvyMenuContributionItem extends CompoundContributionItem implements
             }
         }
 
-        List<MenuManager> items;
+        List<IContributionItem> items;
         MenuManager menuManager;
         if (onlyContainers) {
             // we we have only containers, no need to have a root menu entry
@@ -306,7 +306,7 @@ public class IvyMenuContributionItem extends CompoundContributionItem implements
         }
     }
 
-    public void addCleanable(MenuManager menuManager, List<MenuManager> items,
+    public void addCleanable(MenuManager menuManager, List<IContributionItem> items,
             String name, List<Cleanable> cleanables) {
         CleanCacheAction action = new CleanCacheAction(name, cleanables);
         action.setText(name);
